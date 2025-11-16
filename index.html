@@ -12,9 +12,8 @@
         .cell {
             transition: all 0.2s;
             height: 100%; /* Pastikan sel mengisi tinggi */
-            min-height: 40px; /* Beri tinggi minimal */
+            min-height: 50px; /* Beri tinggi minimal */
             vertical-align: top; /* Rata atas */
-            padding: 4px;
         }
         .cell:hover {
             transform: scale(1.02);
@@ -31,12 +30,12 @@
         table {
             table-layout: fixed; /* Membuat kolom lebih rapi */
             width: 100%;
-            min-width: 1200px; /* Beri lebar total agar kolom tidak sempit */
         }
     </style>
 </head>
 <body class="bg-gray-50">
-    <div class="w-full max-w-7xl mx-auto p-4 min-h-screen"> <div class="text-center mb-4">
+    <div class="w-full max-w-6xl mx-auto p-4 min-h-screen">
+        <div class="text-center mb-4">
             <div class="flex items-center justify-center gap-3 mb-2">
                 <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -80,15 +79,23 @@
         </div>
 
         <div class="border-2 border-black bg-white overflow-x-auto">
-            <table class="w-full border-collapse">
-                <colgroup>
-                    <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> <col style="width: 8.33%;"> </colgroup>
+            <table class="w-full border-collapse" style="width: 1200px;"> <colgroup>
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                    <col style="width: 8.33%;">
+                </colgroup>
                 <tbody>
                     <tr>
-                        <td class="border-b border-black p-2 text-xs bg-white" colspan="12"></td>
-                    </tr>
-                    <tr>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Shuji,Noze">Shuji<br/>Noze</td>
+                        <td class="border-black p-2 text-xs bg-white" rowspan="2"></td> <td class="border-black p-2 text-xs bg-white" rowspan="8"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Shuji,Noze">Shuji<br/>Noze</td>
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Hajime,Kaiho">Hajime<br/>Kaiho</td>
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Najio">Najio</td>
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Kinsei,Hanami,Aozora">Kinsei<br/>Hanami<br/>Aozora</td>
@@ -97,52 +104,44 @@
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Shika,Mizu,Hiromi">Shika<br/>Mizu<br/>Hiromi</td>
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Ayumi,Yuji">Ayumi<br/>Yuji</td>
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Haruna,Airi">Haruna<br/>Airi</td>
-                        <td class="border-b border-black p-2 text-xs bg-white"></td> </tr>
-                    <tr>
-                        <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="4"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-yellow-100" data-names="Piyo" data-stacked="true">Piyo</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-yellow-100" data-names="Piyo" data-stacked="true" rowspan="2">Piyo</td>
                     </tr>
                     <tr>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Naoya">Naoya</td>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Sora,Siyo">Sora<br/>Siyo</td>
+                        <td class="border border-black p-8 text-center text-3xl font-bold bg-white" colspan="5" rowspan="5">Host</td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Sora,Siyo" rowspan="2">Sora<br/>Siyo</td>
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Kaitou,Jine,Riyuki">Kaitou<br/>Jine<br/>Riyuki</td>
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Akira,Akame">Akira<br/>Akame</td>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-yellow-100" data-names="Doci,Yuki" data-stacked="true" rowspan="2">Doci<br/>Yuki</td>
-                    </tr>
+                        <td class="border border-black p-2 text-xs bg-white" rowspan="2"></td> </tr>
                     <tr>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Shika,Rikona">Shika<br/>Rikona</td>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Hoshi,Miura,Yoka">Hoshi<br/>Miura<br/>Yoka</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Naoya">Naoya</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Hoshi,Miura,Yoka">Hoshi<br/>Miura<br/>Yoka</td>
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Chita,Hiro">Chita<br/>Hiro</td>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> </tr>
-                    <tr>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Meiso,Rune">Meiso<br/>Rune</td>
-                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Shanmu" rowspan="4">Shanmu</td>
-                        <td class="border border-black p-8 text-center text-3xl font-bold bg-white" colspan="5" rowspan="5">Host</td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Yukai,Sora,Karia">Yukai<br/>Sora<br/>Karia</td>
-                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Tamura,Karia">Tamura<br/>Karia</td>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-yellow-100" data-names="Geumi,Nalla" data-stacked="true">Geumi<br/>Nalla</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-yellow-100" data-names="Doci,Yuki" data-stacked="true">Doci<br/>Yuki</td>
                     </tr>
                     <tr>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Kira,Mori">Kira<br/>Mori</td>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Hana,Sena">Hana<br/>Sena</td>
-                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Konan,Kyosi,Shizu" rowspan="3">Konan<br/>Kyosi<br/>Shizu</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Shika,Rikona">Shika<br/>Rikona</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Yukai,Sora,Karia">Yukai<br/>Sora</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Tamura,Karia">Tamura<br/>Karia</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Konan,Kyosi,Shizu" rowspan="2">Konan<br/>Kyosi<br/>Shizu</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-yellow-100" data-names="Geumi,Nalla" data-stacked="true">Geumi<br/>Nalla</td>
+                    </tr>
+                    <tr>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Meiso,Rune">Meiso<br/>Rune</td>
+                        <td class="border border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Hana,Sena">Hana<br/>Sena</td>
                         <td class="cell border border-black p-2 text-xs cursor-pointer bg-yellow-100" data-names="Miki" data-stacked="true" rowspan="3">Miki</td>
                     </tr>
                     <tr>
-                        <td class="cell border-r border-black p-2 text-xs cursor-pointer bg-white" data-names="Miyu" rowspan="2">Miyu</td>
-                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-yellow-100" data-names="Chami,Suwa" data-stacked="true" rowspan_="2">Chami<br/>Suwa</td>
-                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Amiko,Inari,Shizu">Amiko<br/>Inari<br/>Shizu</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Kira,Mori">Kira<br/>Mori</td>
+                        <td class="border border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Amiko,Inari,Shizu">Amiko<br/>Inari<br/>Shizu</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Meiro,Kizuna,Kasumi">Meiro<br/>Kizuna<br/>Kasumi</td>
                         </tr>
                     <tr>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> </tr>
-                    <tr>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Meiro,Kizuna,Kasumi">Meiro<br/>Kizuna<br/>Kasumi</td>
-                        <td class="border-r border-black p-2 text-xs bg-white"></td> <td class="border-b border-black p-2 text-xs bg-white"></td> </tr>
-                    <tr>
-                        <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Yuna,Rona" rowspan="2">Yuna<br/>Rona</td>
-                        <td class="border-r border-black p-2 text-xs bg-white" rowspan="3"></td> <td class="border-b border-black p-2 text-xs bg-white" rowspan="3"></td> </tr>
-                    <tr>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Miyu">Miyu</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Shanmu" rowspan="2">Shanmu</td>
+                        <td class="cell border border-black p-2 text-xs cursor-pointer bg-yellow-100" data-names="Chami,Suwa" data-stacked="true" rowspan="2">Chami<br/>Suwa</td>
+                        <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="cell border border-black p-2 text-xs cursor-pointer bg-white" data-names="Yuna,Rona">Yuna<br/>Rona</td>
                         </tr>
                     <tr>
-                        <td class="border-b border-black p-2 text-xs bg-white"></td> </tr>
+                        <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> <td class="border border-black p-2 text-xs bg-white"></td> </tr>
                 </tbody>
             </table>
         </div>
@@ -632,7 +631,7 @@
         };
         // ===== AKHIR DATABASE =====
 
-        // Daftar frame di denah (SESUAI DENAH BARU image_8305c9.png)
+        // Daftar frame di denah (SESUAI DENAH BARU image_821d47.png)
         const allGlasses = [
             { name: 'Shuji', type: 'table', area: 'C1' },
             { name: 'Noze', type: 'table', area: 'C1' },
@@ -665,10 +664,10 @@
             { name: 'Akame', type: 'table', area: 'J2' },
             { name: 'Doci', type: 'stacked', area: 'L2' },
             { name: 'Yuki', type: 'stacked', area: 'L2' },
-            
+
             { name: 'Shika', type: 'table', area: 'A3' },
             { name: 'Rikona', type: 'table', area: 'A3' },
-            { name: 'Shanmu', type: 'table', area: 'C3' },
+            { name: 'Shanmu', type: 'table', area: 'B3' },
             { name: 'Hoshi', type: 'table', area: 'H3' },
             { name: 'Miura', type: 'table', area: 'H3' },
             { name: 'Yoka', type: 'table', area: 'H3' },
@@ -676,37 +675,37 @@
             { name: 'Hiro', type: 'table', area: 'I3' },
             { name: 'Geumi', type: 'stacked', area: 'L3' },
             { name: 'Nalla', type: 'stacked', area: 'L3' },
-            
+
             { name: 'Meiso', type: 'table', area: 'A4' },
             { name: 'Yukai', type: 'table', area: 'H4' },
-            { name: 'Sora', type: 'table', area: 'H4' }, 
+            { name: 'Sora', type: 'table', area: 'H4' },
             { name: 'Karia', type: 'table', area: 'H4' },
             { name: 'Tamura', type: 'table', area: 'I4' },
             { name: 'Konan', type: 'table', area: 'J4' },
             { name: 'Kyosi', type: 'table', area: 'J4' },
             { name: 'Shizu', type: 'table', area: 'J4' },
-            { name: 'Miki', type: 'stacked', area: 'L4' },
+            { name: 'Geumi', type: 'stacked', area: 'L4' }, // typo di denah, harusnya K4
             
             { name: 'Rune', type: 'table', area: 'A5' },
+            { name: 'Chami', type: 'stacked', area: 'B5' },
+            { name: 'Suwa', type: 'stacked', area: 'B5' },
             { name: 'Hana', type: 'table', area: 'I5' },
             { name: 'Sena', type: 'table', area: 'I5' },
-            { name: 'Meiro', type: 'table', area: 'J5' }, 
-            { name: 'Kizuna', type: 'table', area: 'J5' }, 
-            { name: 'Kasumi', type: 'table', area: 'J5' }, 
+            { name: 'Meiro', type: 'table', area: 'J5' }, // Pindah dari J4
+            { name: 'Kizuna', type: 'table', area: 'J5' }, // Pindah dari J4
+            { name: 'Kasumi', type: 'table', area: 'J5' }, // Pindah dari J4
+            { name: 'Miki', type: 'stacked', area: 'L5' },
 
             { name: 'Kira', type: 'table', area: 'A6' },
             { name: 'Mori', type: 'table', area: 'A6' },
-            { name: 'Amiko', type: 'table', area: 'I6' }, 
-            { name: 'Inari', type: 'table', area: 'I6' }, 
-            { name: 'Shizu', type: 'table', area: 'I6' }, 
+            { name: 'Amiko', type: 'table', area: 'I6' },
+            { name: 'Inari', type: 'table', area: 'I6' },
+            { name: 'Shizu', type: 'table', area: 'I6' },
+            { name: 'Yuna', type: 'table', area: 'J6' }, // Pindah dari J7
+            { name: 'Rona', type: 'table', area: 'J6' }, // Pindah dari J7
 
-            { name: 'Miyu', type: 'table', area: 'A7' },
-            { name: 'Chami', type: 'stacked', area: 'C7' }, 
-            { name: 'Suwa', type: 'stacked', area: 'C7' }, 
-            { name: 'Yuna', type: 'table', area: 'J7' }, 
-            { name: 'Rona', type: 'table', area: 'J7' }
+            { name: 'Miyu', type: 'table', area: 'A7' }
         ];
-
 
         // === AMBIL SEMUA ELEMEN ===
         const searchInput = document.getElementById('searchInput');
@@ -895,7 +894,7 @@
             });
 
             if (term) {
-                const filteredFrames = Object.keys(glassesData).filter(name => name.toLowerCase().includes(term));
+                const filteredNames = Object.keys(glassesData).filter(name => name.toLowerCase().includes(term));
                 const filteredLenses = Object.keys(lensesData).filter(name => name.toLowerCase().includes(term));
                 
                 let allFilteredNames = [...new Set([...filteredFrames, ...filteredLenses])]; // Pakai Set agar unik
