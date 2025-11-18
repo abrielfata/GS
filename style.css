@@ -1,0 +1,37 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cell {
+    transition: all 0.2s;
+}
+.cell:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    z-index: 10; /* Agar saat hover dia muncul di atas */
+}
+.cell.highlighted {
+    background-color: #fde047 !important; /* Kuning stabilo */
+    color: black !important;
+}
+.cell.selected {
+    ring: 4px;
+    ring-color: #3b82f6;
+    transform: scale(1.02);
+    z-index: 20;
+}
+/* WARNA KHUSUS SESUAI GAMBAR */
+.cell.yellow {
+    background-color: #fef08a; /* Kuning pastel */
+}
+.cell.brown {
+    background-color: #78350f; /* Cokelat tua */
+    color: white;
+}
+.cell.gray {
+    background-color: #9ca3af; /* Abu-abu */
+    color: white;
+}
+/* Supaya teks di kotak cokelat tetap putih saat di-hover */
+.cell.brown:hover {
+    color: white; 
+}
